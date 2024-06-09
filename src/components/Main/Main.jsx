@@ -61,7 +61,17 @@ const Main = () => {
             </div>
             <div className={cx("result-data")}>
               <img src={assets.gemini_icon} />
-              <p>{resultData}</p>
+              {loading ? (
+                <>
+                  <div className={cx("loader")}>
+                    <hr />
+                    <hr />
+                    <hr />
+                  </div>
+                </>
+              ) : (
+                <p>{resultData}</p>
+              )}
             </div>
           </div>
         )}
