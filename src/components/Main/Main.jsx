@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import classNames from "classnames/bind";
+
 import styles from "./Main.module.scss";
 import { assets } from "@/assets";
 import { Context } from "@/context/Context";
@@ -70,7 +71,7 @@ const Main = () => {
                   </div>
                 </>
               ) : (
-                <p>{resultData}</p>
+                <p dangerouslySetInnerHTML={{ __html: resultData }}></p>
               )}
             </div>
           </div>
